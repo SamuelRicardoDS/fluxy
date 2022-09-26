@@ -1,7 +1,8 @@
 export const FirstScreen = () => {
   return (
-    <div>
-      <h1>First Screen</h1>
+    <div className="flex flex-col">
+      <button>login</button>
+      <button>register</button>
     </div>
   );
 }
