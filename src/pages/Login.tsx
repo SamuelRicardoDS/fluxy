@@ -1,3 +1,5 @@
+import { BackButton } from "../components/BackButton";
+
 export const Login = () => {
   return (
     <div className="flex flex-col bg-slate-400 w-1/2 h-screen items-center">
@@ -8,6 +10,7 @@ export const Login = () => {
         <input type="password" />
         <button>login</button>
       </form>
+      <BackButton />
     </div>
   );
 }

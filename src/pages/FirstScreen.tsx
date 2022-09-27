@@ -12,8 +12,8 @@ export const FirstScreen = () => {
 
   return (
     <div className="flex flex-col">
-      <button onClick={() => handleClickLogin()}>login</button>
-      <button onClick={() => handleClickRegister()}>register</button>
+      <button onClick={() => handleClickLogin()} className="">login</button>
+      <button onClick={() => handleClickRegister()} className="">register</button>
     </div>
   );
 }
