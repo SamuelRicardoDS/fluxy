@@ -4,6 +4,7 @@ import { useApi } from "../../hooks/useApi";
 import { User } from "../../types/User";
 import { AuthContext } from "./AuthContext";
 
+//da o contexto de autenticação, por isso foi importado para main.tsx
 export const AuthProvider = ({ children }: { children: JSX.Element }) => {
   const [user, setUser] = useState<User | null>(null);
   const api = useApi();
@@ -18,7 +19,9 @@ const signIn = async (email: string, password: string) => {
      
 }
 
-const signOut = () => {
+const signOut = async () => {
+  await api.logOut()
+  setUser(null)
 }
 
   return (
